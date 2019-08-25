@@ -35,3 +35,10 @@ $('div.modal').on('show.bs.modal', function() {
 		}
 	}
 });
+
+var map1 = new BMap.Map("map-fs");
+    var point1 = new BMap.Point(116.217035,39.770664);
+    map1.centerAndZoom(point1, 19);
+    var marker1 = new BMap.Marker(point1);  // 创建标注
+    map1.addOverlay(marker1);               // 将标注添加到地图中
+    marker1.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画  
